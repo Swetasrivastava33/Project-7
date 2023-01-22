@@ -1,0 +1,192 @@
+
+//  console.log(nums);
+// // let a=3;
+// // console.log(a);
+// function  reverse(arr){
+//     let rev=[];
+//     for(let i = arr.length-1;i>=0; i--){
+//         rev.push(arr[i]);
+//         rev[arr.length-i-1] =arr[i];
+//     }
+//     return rev;
+// }
+//     const revArr = reverse(nums);
+// //     console.log(revArr)
+// let obj = {
+//     name : "lpu",
+//     type :"uni",
+//   }
+//   console.log(obj);
+//   for(const key in obj){
+//     console.log(item);
+//     console,log(obj[key]);
+//   }
+//   const values = Object.values(obj);
+//   console keys = Object.keys(obj);
+//   console.log(values);
+//   const keyValuesPairs = Object.entries(obj);
+//   console.log(keyValuesPairs);
+  
+// const stuname=["arun","aryan","payal","pawan"]
+// console.log(stuname.sort());
+// const nums =[2,3,45,565];
+// array.sort();
+// console.log(nums);
+// let fruits =["apple","banana","mango"];
+// // for(var i = 0;i<fruits.length;i++){
+//  console.log(fruits[i]);   
+// // }
+// // for(var index in fruits){
+// //     console.log(fruits[index]);
+// // }
+// // console.log(fruits);
+// // function myFunc(currentValue){
+// //     console.log(currentValue);
+
+// // }
+// // fruits.forEach(myFunc);
+// // fruits.forEach(function(){
+// //     console.log(values);
+// // });
+// // fruits.forEach((value)=>console.log(values));
+// fruits.map(value)=>{
+//     console.log(value);
+//     return value;
+// }
+
+//to transverse in array
+// let students =[
+    
+//            { name :"alex",reg_id: 112},
+//            { name :"ali",reg_id: 182},
+//         { name :"agyy",reg_id: 102},
+//         { name :"aloi",reg_id: 672},
+//         { name :"hali",reg_id: 682},
+        
+
+    
+// ]
+// console.log(students);
+// for(const item in students){
+//     console.log(item); 
+// }
+// students.map((students)=>{
+//     console.log(students.name);
+
+// });
+// //for specific id
+//  const st = students.find((student)=> {
+// return student.reg_id == 112;
+// });
+// console.log(st);
+// //name
+// console.log(st.name);
+// const sts = students.filter((student)=>{
+//     return student.reg_id<100 && student.reg_id>-500;
+
+// })
+// console.log(sts);
+// let num =[2, 3, 5 , 6, 8]
+// num.reverse();
+// console.log(num);
+
+
+// const numbers = [2,3,4,5,6];
+// const total = numbers.reduce((sum, currentValue, currentIndex) =>{
+//     return sum +=currentValue;
+
+// },0);
+// console.log(total);
+// let students =[
+    
+//                { name :"alex",reg_id: 112},
+//                { name :"ali",reg_id: 182},
+//             { name :"agyy",reg_id: 102},
+//             { name :"aloi",reg_id: 672},
+//             { name :"hali",reg_id: 682},
+            
+    
+        
+//     ]
+//     console.log(students);
+//     let names = students.reduce((ns, student) =>{
+//         ns.push(student.name);
+//         return ns;
+//     }, []);
+//     console.log(names);
+let a = 6655 ;
+console.log(a);
+
+/**  Date : 21 jan
+ 1).* Task description : write a method that creates a new array with given values
+ * expected result : (3, 'a') =>['a','a','a']
+ * @param {number} arraySize - size of array
+ * @param{?} value - value to fill
+ * @returns {Array}
+ */
+ 
+
+ const fill = (arraySize , value)=> {
+    //throw new error('put ur soln here');
+    // let arr = [];
+    // for(let i = 0; i < arraySize ; i++){
+    //     //arr[i] = value;
+    //     arr.push(value);
+    // }
+    //return arr;
+    //using inbuilt func fill()
+    return new Array(arraySize).fill(value);
+}
+const data = 10;
+const valueToFill = 5;
+console.log(fill(data , valueToFill));//['a','a','a']
+
+
+/** 
+ 2).* Task desc : write a method that clears array from all unnecessary elements , like false, undefined,
+ * empty strings, zero and null
+ * expected res: [0,1,false,undefined,'', 3, null],"lpu" => [1,2,3,"lpu"]
+ * TC = 1 to 5
+ * @param{array} array - an array of any ele
+ * @returns {Array}
+ */
+
+const compact = (array) => {
+    //throw new Error('put ur soln here');
+//    let filteredArray =  array.filter((currentValue) => {
+//         if(currentValue) return true;
+//         else return false;
+//     });
+//     return filteredArray;
+
+
+
+//single liner 
+let filteredArray = array.filter((currentValue) => currentValue);
+return filteredArray;
+}
+const data1 = [0,1,false,2,undefined,'',3, null,"lpu"]
+console.log(compact(data1));//[1,2,3 ]
+
+/** 
+ 3)*Task desc : write a method that returns an object composed of key-value pairs .
+ * expected res : [['a',1],['b',2]] => {a: 1, b: 2}
+ * TC : 2 of 5
+ * @param {Array} array - a deep array of pairs 
+ * @returns {Array}
+ */
+
+const fromPairs = (array) => {
+    //throw new Error('put ur soln here');
+    let obj = {};
+    for(let i = 0;i<array.length ; i++){
+        //obj[key] = value;
+        let key = array[i][0];
+        let value = array[i][1];
+        obj[key] = value;
+    }
+    return obj;
+
+}
+const data2 = [['a',1], ['b',2],['c',3]];
+console.log(fromPairs (data2));
